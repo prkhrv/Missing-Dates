@@ -1,5 +1,4 @@
 import datetime
-import statistics
 
 # dict_1 = {'2019-01-01':100,'2019-01-04':115}
 # dict_2 = {'2019-01-10':10,'2019-01-11':20,'2019-01-13':10}
@@ -33,8 +32,10 @@ def getAvg(date, D, gap):
 
 
 def solution(D):
-    last_key = list(D)[-1]
-    first_key = list(D)[0]
+    dates = list(D)
+    dates.sort(key = lambda date: datetime.datetime.strptime(date,'%Y-%m-%d')) 
+    last_key = dates[-1]
+    first_key = dates[0]
 
     startDate = datetime.datetime.strptime(first_key, '%Y-%m-%d')
     endDate = datetime.datetime.strptime(last_key, '%Y-%m-%d')
