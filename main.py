@@ -1,8 +1,10 @@
 import datetime
 import statistics
 
-dict_1 = {'2019-01-01':100,'2019-01-04':115}
-dict_2 = {'2019-01-10':10,'2019-01-11':20,'2019-01-13':10}
+# dict_1 = {'2019-01-01':100,'2019-01-04':115}
+# dict_2 = {'2019-01-10':10,'2019-01-11':20,'2019-01-13':10}
+
+
 
 
 def getAvg(date, D, gap):
@@ -44,8 +46,4 @@ def solution(D):
                                        "%Y-%m-%d"):getAvg(datetime.datetime.strftime(startDate+datetime.timedelta(days=k), 
                                        "%Y-%m-%d"),D,days) for k in range(days+1)}
 
-    print(allDates)
-
-
-solution(dict_1)
-solution(dict_2)
+    return allDates
