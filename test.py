@@ -7,9 +7,11 @@ from main import solution
 class Test(unittest.TestCase):
     inp_1 = {'2019-01-01':100,'2019-01-04':115}
     inp_2 = {'2019-01-10':10,'2019-01-11':20,'2019-01-13':10}
+    inp_3 = {'2019-01-01':1,'2019-01-03':3}
 
     des_out_1 = {'2019-01-01':100,'2019-01-02':105,'2019-01-03':110,'2019-01-04':115}
     des_out_2 = {'2019-01-10':10,'2019-01-11':20,'2019-01-12':15,'2019-01-13':10}
+    des_out_3 = {'2019-01-01':1,'2019-01-02':2,'2019-01-03':3}    
     
 
     def test_0_case1(self):
@@ -34,6 +36,19 @@ class Test(unittest.TestCase):
         self.assertEqual(out_2,self.des_out_2)
 
         print("\nFinish test 2\n")
+
+        
+    def test_2_case3(self):
+        print("Start test 3\n")
+        out_3 = solution(self.inp_3)
+
+        print("\nDesired output\n")
+        print(self.des_out_3)
+        print("\nActual output\n")
+        print(out_3)
+        self.assertEqual(out_3,self.des_out_3)
+
+        print("\nFinish test 3\n")
 
 
 if __name__ == '__main__':

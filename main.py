@@ -5,8 +5,6 @@ import statistics
 # dict_2 = {'2019-01-10':10,'2019-01-11':20,'2019-01-13':10}
 
 
-
-
 def getAvg(date, D, gap):
     if str(date) in D.keys():
         return D[str(date)]
